@@ -1,4 +1,4 @@
-
+@smoke
 Feature: Title Verification
   User Story: As a user, i should see "Etsy - Shop for handmade, vintage, custom, and unique gifts for
   everyone" title
