@@ -15,8 +15,8 @@ Feature: Web table user order feature
     And user enters process order button
     Then user should see "Sherlock Holmes" in first row of the web table
 
-  @femaleScientists
-  Scenario Template:
+  @runNow
+  Scenario Outline:
     Given user is already logged in and on order page
     When user selects product type "<productType>"
     And user enters quantity <quantity>
@@ -50,8 +50,6 @@ Feature: Web table user order feature
       | Familybea   | 1        | Archimedes        | 221B Baker Street | London | England | 50505 | visa           | 1111222233334444 | 12/23          | Archimedes        |
       | Screenable  | 2        | Alexander Fleming | 221B Baker Street | London | England | 50505 | visa           | 1111222233334444 | 12/23          | Alexander Fleming |
 
-    @negativeScenario
-    Examples: Famous Male scientist
 
 
 

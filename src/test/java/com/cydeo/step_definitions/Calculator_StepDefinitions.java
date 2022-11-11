@@ -14,6 +14,7 @@ public class Calculator_StepDefinitions {
     }
     @When("I add {int} with {int}")
     public void i_add_with(int int1, int int2) {
+
         System.out.println(" when i add " + int1 + " with " + int2 );
         actualResukt = int1+int2;
     }
