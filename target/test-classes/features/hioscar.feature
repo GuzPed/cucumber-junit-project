@@ -1,6 +1,6 @@
 Feature: care options testing
 
-  @workNow
+
   Scenario: hioscar.com care options web app testing
   Given user on the homepage
     When user clicks Search button

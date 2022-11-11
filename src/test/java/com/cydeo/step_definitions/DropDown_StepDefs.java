@@ -23,7 +23,9 @@ public class DropDown_StepDefs {
     @Then("User should see below info in month dropdown")
     public void user_should_see_below_info_in_month_dropdown(List<String> expectedMonths) {
 
-        Assert.assertEquals(expectedMonths, BrowserUtils.dropdownOptionsAsString(dropdownPage.dropdown));
+        List<String> actualOptionsAsString = BrowserUtils.dropdownOptionsAsString(dropdownPage.dropdown);
+
+        Assert.assertEquals(expectedMonths,actualOptionsAsString);
     }
 
 }

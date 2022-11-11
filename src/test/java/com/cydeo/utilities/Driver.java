@@ -23,22 +23,22 @@ public class Driver {
     //creae reusable utility method which will return same driver instance when we call it
     public static WebDriver getDriver(){
         String browser="";
+        if (driverPool.get()==null) {
 
-      //  if(driverPool.get()==null){
-     //       String browser = ConfigReader.getProperty("browser");
+            if (System.getProperty("BROWSER") == null) {
+                browser = ConfigReader.getProperty("browser");
+            } else {
+                browser = System.getProperty("BROWSER");
+            }
+            System.out.println("Browser: " + browser);
 
-            if (driverPool == null) {
-                if (System.getProperty("BROWSER") == null) {
-                    browser = ConfigReader.getProperty("browser");
-                } else {
-                    browser = System.getProperty("BROWSER");
-                }
-                System.out.println("Browser: " + browser);
-                switch (browser) {
+
+            switch (browser) {
                     case "remote-chrome":
                         try {
                             // assign your grid server address
                             String gridAddress = "3.82.216.148";
+                            //http://3.82.216.148/
                             URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
                             DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                             desiredCapabilities.setBrowserName("chrome");

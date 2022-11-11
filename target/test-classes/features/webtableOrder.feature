@@ -15,7 +15,7 @@ Feature: Web table user order feature
     And user enters process order button
     Then user should see "Sherlock Holmes" in first row of the web table
 
-  @runNow
+
   Scenario Outline:
     Given user is already logged in and on order page
     When user selects product type "<productType>"
@@ -30,7 +30,7 @@ Feature: Web table user order feature
     And user enters expiry date "<expirationDate>"
     And user enters process order button
     Then user should see "<expectedName>" in first row of the web table
-    @femaleScientists
+
     Examples: Famous Female scientist
         | productType | quantity | customerName      | street            | city   | state   | zip   | creditCardType | creditCardNumber | expirationDate | expectedName      |
         | Familybea   | 2        | Rosalind Franklin | 221B Baker Street | London | England | 50505 | visa           | 1111222233334444 | 12/23          | Rosalind Franklin |
@@ -40,7 +40,7 @@ Feature: Web table user order feature
         | Familybea   | 1        | Marry Anning      | 221B Baker Street | London | England | 50505 | visa           | 1111222233334444 | 12/23          | Marry Anning      |
         | Screenable  | 2        | Lise Meitner      | 221B Baker Street | London | England | 50505 | visa           | 1111222233334444 | 12/23          | Lise Meitner      |
 
-    @maleScientists
+
     Examples: Famous Male scientist
       | productType | quantity | customerName      | street            | city   | state   | zip   | creditCardType | creditCardNumber | expirationDate | expectedName      |
       | Familybea   | 2        | Albert Einstein   | 221B Baker Street | London | England | 50505 | visa           | 1111222233334444 | 12/23          | Albert Einstein   |
