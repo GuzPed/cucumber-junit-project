@@ -14,7 +14,6 @@ Feature: Wikipedia Search Functionality and Verification
     And User clicks wiki search button
     Then User sees "Steve Jobs" is in the wiki title
 
-@ScenarioOutlinePractice
   Scenario Outline: Wikipedia Search Functionality Header Verification
     When User types "<searchValue>" in the wiki search box
     And User clicks wiki search button

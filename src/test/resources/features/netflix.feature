@@ -1,4 +1,4 @@
-@regression
+
 Feature: Movie suggestion feature
   As a user I should be able to get movies according to my preference
 
